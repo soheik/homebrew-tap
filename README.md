@@ -13,5 +13,5 @@ brew tap soheik/tap
 Set default apps for file extensions on macOS.
 
 ```bash
-brew install soheik/Usher
+brew install --cask usher
 ```
