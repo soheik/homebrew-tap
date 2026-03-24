@@ -6,6 +6,10 @@ cask "usher" do
   name "Usher"
   desc "Set default apps for file extensions on macOS"
   homepage "https://github.com/soheik/Usher"
-
   app "Usher.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-dr", "com.apple.quarantine", "#{appdir}/Usher.app"]
+  end
 end
